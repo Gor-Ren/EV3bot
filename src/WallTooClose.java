@@ -10,7 +10,7 @@ public class WallTooClose implements Behavior {
 	@Override
 	public boolean takeControl() {
 		float[] sample = new float[1];
-		RobotControls.getSensor().getDistanceMode().fetchSample(sample,0);
+		RobotControls.getUsSensorSampler().fetchSample(sample,0);
 		return sample[0] < RobotControls.TARGET_DISTANCE - RobotControls.LEEWAY;
 	}
 
