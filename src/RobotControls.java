@@ -12,7 +12,7 @@ public class RobotControls {
 	private static RegulatedMotor rightMotor = new EV3LargeRegulatedMotor(MotorPort.C);
 	
 	// sensors and sensor samplers
-	private static EV3UltrasonicSensor usSensor = new EV3UltrasonicSensor(SensorPort.S2);
+	private static EV3UltrasonicSensor usSensor = new EV3UltrasonicSensor(SensorPort.S1);
 	private static SampleProvider usSensorSampler = RobotControls.usSensor.getDistanceMode();
 	private static EV3TouchSensor touchSensor = new EV3TouchSensor(SensorPort.S4);
 	private static SampleProvider touchSensorSampler = RobotControls.touchSensor.getTouchMode();
@@ -21,10 +21,12 @@ public class RobotControls {
 	// Constants
 	public static final float TARGET_DISTANCE = (float) 0.15; // meters
 	public static final float LEEWAY = (float) 0.05; // meters
-	public static final int TURN_ROTATION = 50; // degrees
+	public static final int TURN_ROTATION = 75; // degrees
 	public static final int POST_TURN_ROTATION = 360; // degrees
 	public static final int BACK_UP_DISTANCE = -180; // degrees
-	public static final int BACK_UP_ROTATION = 50; // degrees
+	public static final int BACK_UP_ROTATION = 90; // degrees
+	public static final float MOTOR_SLOW_FACTOR = (float) 0.7; // dimensionless
+	public static final float DISTANCE_BETWEEN_WHEELS = (float) 12; // cm
 	
 	public static RegulatedMotor getLeftMotor() {
 		return leftMotor;
