@@ -17,10 +17,23 @@ public class RobotControls {
 	private static EV3TouchSensor touchSensor = new EV3TouchSensor(SensorPort.S4);
 	private static SampleProvider touchSensorSampler = RobotControls.touchSensor.getTouchMode();
 
+	// PID parameters
+	private static final double P_GAIN = 1;
+	private static final double I_GAIN = 0;
+	private static final double D_GAIN = 0;
+	public static final double PID_OUTPUT_LIMIT = 0.2;
+
+	// PID controller
+	private static MiniPID pid = new MiniPID(RobotControls.P_GAIN, RobotControls.I_GAIN, RobotControls.D_GAIN);
+	static {
+		// configure controllers
+		pid.setSetpoint(RobotControls.TARGET_DISTANCE);
+		pid.setOutputLimits(-RobotControls.PID_OUTPUT_LIMIT,RobotControls.PID_OUTPUT_LIMIT);
+	}
 	
 	// Constants
-	public static final float TARGET_DISTANCE = (float) 0.15; // meters
-	public static final float LEEWAY = (float) 0.05; // meters
+	public static final float TARGET_DISTANCE = (float) 0.30; // meters
+	public static final float LEEWAY = (float) 0.20; // meters
 	public static final int TURN_ROTATION = 75; // degrees
 	public static final int POST_TURN_ROTATION = 360; // degrees
 	public static final int BACK_UP_DISTANCE = -180; // degrees
@@ -34,6 +47,10 @@ public class RobotControls {
 	
 	public static RegulatedMotor getRightMotor() {
 		return rightMotor;
+	}
+	
+	public static MiniPID getPID() {
+		return pid;
 	}
 	
 	public static SampleProvider getUsSensorSampler() {

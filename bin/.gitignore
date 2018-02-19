@@ -9,3 +9,5 @@
 /WallTooClose.class
 /WallTooFar.class
 /CleverIdealWallDistance.class
+/PIDIdealWallDistance.class
+/MiniPID.class
