@@ -1,0 +1,10 @@
+/.classpath
+/.project
+/.settings/
+/Controller.class
+/Controller.jar
+/HitFrontWall.class
+/IdealWallDistance.class
+/RobotControls.class
+/WallTooClose.class
+/WallTooFar.class

@@ -3,10 +3,11 @@ import lejos.robotics.subsumption.Behavior;
 
 public class Controller {
 	public static void main(String[] args) {
-		Behavior goForward = new IdealWallDistance();
-		Behavior adjustRight = new WallTooFar();
-		Behavior adjustLeft = new WallTooClose();
-		Behavior[] behaviors = {goForward, adjustRight, adjustLeft};
+		Behavior[] behaviors = {
+		                        new IdealWallDistance(),
+		                        new WallTooFar(),
+		                        new WallTooClose(),
+								};
 		
 		Arbitrator arbitrator = new Arbitrator(behaviors);
 		arbitrator.go();

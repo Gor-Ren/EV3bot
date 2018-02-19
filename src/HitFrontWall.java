@@ -14,7 +14,7 @@ public class HitFrontWall implements Behavior {
 
 	@Override
 	public void action() {
-		suppressed = false;
+		this.suppressed = false;
 		LCD.drawString(this.getClass().getName(), 0, 4);
 		
 		//Back up.
@@ -26,13 +26,12 @@ public class HitFrontWall implements Behavior {
 		RobotControls.getRightMotor().rotate(RobotControls.BACK_UP_ROTATION, false);
 		
 		RobotControls.getLeftMotor().stop();
-		RobotControls.getRightMotor().stop();	
+		RobotControls.getRightMotor().stop();
 	}
 
 	@Override
 	public void suppress() {
-		// TODO Auto-generated method stub
-		
+		this.suppressed = true;
 	}
 
 }
