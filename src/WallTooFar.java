@@ -17,12 +17,15 @@ public class WallTooFar implements Behavior {
 		this.suppressed = false;
 		LCD.drawString(this.getClass().getName(), 0, 4);
 
+		RobotControls.incrementCounter();
+
 		// make an incremental turn towards wall
+		RobotControls.getRightMotor().rotate(-RobotControls.TURN_ROTATION, true);
 		RobotControls.getLeftMotor().rotate(RobotControls.TURN_ROTATION, false);
 
 		// drive forwards fixed distance
-		RobotControls.getLeftMotor().rotate(RobotControls.POST_TURN_ROTATION, true);
-		RobotControls.getRightMotor().rotate(RobotControls.POST_TURN_ROTATION, true);
+		RobotControls.getLeftMotor().rotate(RobotControls.POST_TURN_DISTANCE, true);
+		RobotControls.getRightMotor().rotate(RobotControls.POST_TURN_DISTANCE, true);
 		
 		while(!this.suppressed && RobotControls.getLeftMotor().isMoving()) {
 			Thread.yield();

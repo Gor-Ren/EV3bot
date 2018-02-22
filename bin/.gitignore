@@ -1,13 +1,13 @@
 /.classpath
 /.project
 /.settings/
+/CleverIdealWallDistance.class
 /Controller.class
 /Controller.jar
 /HitFrontWall.class
 /IdealWallDistance.class
+/MiniPID.class
+/PIDIdealWallDistance.class
 /RobotControls.class
 /WallTooClose.class
 /WallTooFar.class
-/CleverIdealWallDistance.class
-/PIDIdealWallDistance.class
-/MiniPID.class
