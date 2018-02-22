@@ -16,6 +16,8 @@ public class HitFrontWall implements Behavior {
 	public void action() {
 		this.suppressed = false;
 		LCD.drawString(this.getClass().getName(), 0, 4);
+		RobotControls.incrementBumpCounter();
+		
 		
 		//Back up.
 		RobotControls.getLeftMotor().rotate(RobotControls.BACK_UP_DISTANCE, true);

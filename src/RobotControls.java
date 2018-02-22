@@ -10,6 +10,7 @@ import lejos.robotics.SampleProvider;
 public class RobotControls {
 	// wall too far/ too near action counter
 	private static int interventionCounter = 0;
+	private static int bumpCounter = 0;
 
 	// motors
 	private static RegulatedMotor leftMotor = new EV3LargeRegulatedMotor(MotorPort.B);
@@ -65,9 +66,14 @@ public class RobotControls {
 		return touchSensorSampler;
 	}
 	
-	public static void incrementCounter () {
+	public static void incrementInterventionCounter () {
 		RobotControls.interventionCounter++;
-		LCD.drawInt(RobotControls.interventionCounter, 0, 3);
+		LCD.drawString("Corrections: " + RobotControls.interventionCounter, 0, 3);
+	}
+	
+	public static void incrementBumpCounter() {
+		RobotControls.bumpCounter++;
+		LCD.drawString("Bumps: " + RobotControls.bumpCounter, 0, 2);
 	}
 
 }

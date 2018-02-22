@@ -17,7 +17,7 @@ public class WallTooFar implements Behavior {
 		this.suppressed = false;
 		LCD.drawString(this.getClass().getName(), 0, 4);
 
-		RobotControls.incrementCounter();
+		RobotControls.incrementInterventionCounter();
 
 		// make an incremental turn towards wall
 		RobotControls.getRightMotor().rotate(-RobotControls.TURN_ROTATION, true);

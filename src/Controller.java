@@ -4,7 +4,7 @@ import lejos.robotics.subsumption.Behavior;
 public class Controller {
 	public static void main(String[] args) {
 		Behavior[] behaviors = {
-		                        new PIDIdealWallDistance(),
+		                        new IdealWallDistance(),
 		                        new WallTooFar(),
 		                        new WallTooClose(),
 		                        new HitFrontWall(),
