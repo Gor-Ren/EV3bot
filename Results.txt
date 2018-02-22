@@ -1,0 +1,19 @@
+PID Control:
+Run | Time | Bumps | Corrections
+---------------------------------
+ 1  | 1:06 | 7     | 10
+ 2  | 1:12 | 9     | 9
+ 3  | 1:19 | 10    | 14
+ 4  | 1:13 | 9     | 11
+ 5  | 1:07 | 5     | 14
+ 
+ Comments: Got stuck on edges often. On run 3, confused in a corner.
+ 
+Simple Control:
+Run | Time | Bumps | Corrections
+---------------------------------
+ 1  | 0:58 | 6     | 9
+ 2  | 1:04 | 8     | 13
+ 3  | 1:10 | 8     | 18
+ 4  | 1:01 | 7     | 11
+ 5  | 0:57 | 6     | 8
