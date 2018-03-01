@@ -1,3 +1,7 @@
+/*
+* ATTRIBUTION: Code taken from the miniPID package, https://github.com/tekdemo/MiniPID-Java, used under the GPL v3 license.
+*/
+
 /**
 * Small, easy to use PID implementation with advanced controller capability.<br> 
 * Minimal usage:<br>
